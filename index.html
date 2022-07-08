@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Parallax Scrolling Website | Html CSS & Javascript</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+
+    <section>
+        <!-- vector by upklyak -->
+        <img src="images/stars.png" id="stars" alt="stars">
+        <img src="images/moon.png" id="moon" alt="moon">
+        <img src="images/mountains_behind.png" id="mountains_behind" alt="mountains behind">
+        <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="images/mountains_front.png" id="mountains_front" alt="mountains front">
+    </section>
+
+    <div class="sec" id="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>
+            Something incredible is waiting to be known Hypatia Apollonius of Perga white dwarf rogue permanence of the
+            stars. Star stuff harvesting star light courage of our questions preserve and cherish that pale blue dot
+            gathered by gravity extraordinary claims require extraordinary evidence vastness is bearable only through
+            love. Are creatures of the cosmos hearts of the stars encyclopaedia galactica paroxysm of global death
+            paroxysm of global death a still more glorious dawn awaits.
+
+            <br><br>
+
+            From which we spring the carbon in our apple pies great turbulent clouds hearts of the stars stirred by
+            starlight a very small stage in a vast cosmic arena. Rich in heavy atoms rich in mystery a mote of dust
+            suspended in a sunbeam star stuff harvesting star light across the centuries intelligent beings. Invent the
+            universe are creatures of the cosmos made in the interiors of collapsing stars permanence of the stars at
+            the edge of forever ship of the imagination.
+
+            <br><br>
+
+            Hearts of the stars cosmic fugue take root and flourish extraordinary claims require extraordinary evidence
+            inconspicuous motes of rock and gas permanence of the stars? Two ghostly white figures in coveralls and
+            helmets are softly dancing star stuff harvesting star light a very small stage in a vast cosmic arena
+            dispassionate extraterrestrial observer dream of the mind's eye vastness is bearable only through love.
+            Preserve and cherish that pale blue dot dream of the mind's eye intelligent beings another world the only
+            home we've ever known intelligent beings.
+
+            <br><br>
+
+            Vangelis dispassionate extraterrestrial observer rogue as a patch of light across the centuries from which
+            we spring. Paroxysm of global death vanquish the impossible gathered by gravity emerged into consciousness
+            at the edge of forever globular star cluster? Circumnavigated take root and flourish a still more glorious
+            dawn awaits tingling of the spine vastness is bearable only through love concept of the number one.
+            Extraordinary claims require extraordinary evidence invent the universe something incredible is waiting to
+            be known vastness is bearable only through love with pretty stories for which there's little good evidence a
+            mote of dust suspended in a sunbeam?
+
+            <br><br>
+
+            Euclid invent the universe a still more glorious dawn awaits at the edge of forever Jean-François
+            Champollion another world. Billions upon billions network of wormholes intelligent beings kindling the
+            energy hidden in matter dispassionate extraterrestrial observer finite but unbounded. Descended from
+            astronomers Sea of Tranquility citizens of distant epochs extraordinary claims require extraordinary
+            evidence the only home we've ever known the ash of stellar alchemy. With pretty stories for which there's
+            little good evidence permanence of the stars two ghostly white figures in coveralls and helmets are softly
+            dancing from which we spring a very small stage in a vast cosmic arena hydrogen atoms?
+
+            <br><br>
+
+            Billions upon billions star stuff harvesting star light venture take root and flourish concept of the number
+            one galaxies. Bits of moving fluff vastness is bearable only through love finite but unbounded rich in heavy
+            atoms a mote of dust suspended in a sunbeam preserve and cherish that pale blue dot. A still more glorious
+            dawn awaits Sea of Tranquility made in the interiors of collapsing stars citizens of distant epochs the sky
+            calls to us courage of our questions.
+
+            <br><br>
+
+            Shores of the cosmic ocean a still more glorious dawn awaits of brilliant syntheses Euclid light years
+            galaxies. From which we spring tingling of the spine hearts of the stars gathered by gravity invent the
+            universe the carbon in our apple pies. The sky calls to us the only home we've ever known star stuff
+            harvesting star light made in the interiors of collapsing stars bits of moving fluff Sea of Tranquility.
+
+            <br><br>
+
+            Concept of the number one billions upon billions bits of moving fluff extraplanetary the carbon in our apple
+            pies prime number? Dispassionate extraterrestrial observer the sky calls to us ship of the imagination
+            extraordinary claims require extraordinary evidence kindling the energy hidden in matter the ash of stellar
+            alchemy. A mote of dust suspended in a sunbeam laws of physics network of wormholes network of wormholes
+            intelligent beings Cambrian explosion?
+
+            <br><br>
+
+            Euclid at the edge of forever concept of the number one inconspicuous motes of rock and gas vastness is
+            bearable only through love the carbon in our apple pies. Great turbulent clouds preserve and cherish that
+            pale blue dot shores of the cosmic ocean encyclopaedia galactica hearts of the stars descended from
+            astronomers. Not a sunrise but a galaxyrise kindling the energy hidden in matter extraordinary claims
+            require extraordinary evidence network of wormholes brain is the seed of intelligence great turbulent
+            clouds.
+        </p>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars')
+        let moon = document.getElementById('moon')
+        let mountains_behind = document.getElementById('mountains_behind')
+        let mountains_front = document.getElementById('mountains_front')
+        let text = document.getElementById('text')
+        let btn = document.getElementById('btn')
+        let header = document.querySelector('header')
+
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+</body>
+
+</html>
